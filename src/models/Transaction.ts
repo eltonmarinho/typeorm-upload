@@ -7,7 +7,7 @@ import { Entity,
   JoinColumn } from 'typeorm'
 import Category from './Category';
 
-@Entity('transations')
+@Entity('transactions')
 class Transaction {
   @PrimaryGeneratedColumn('uuid')
   id: string;
@@ -23,6 +23,9 @@ class Transaction {
 
   @ManyToOne(()=>Category)
   @JoinColumn({ name:'category_id'})
+  category:Category;
+
+  @Column()
   category_id: Category;
 
   @CreateDateColumn()

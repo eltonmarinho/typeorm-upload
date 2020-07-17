@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, TableColumn, TableForeignKey, Column} from "typeorm";
+import {MigrationInterface, QueryRunner, TableColumn, TableForeignKey } from "typeorm";
 
 export default class AddCategoryIdToTransactions1594593411855 implements MigrationInterface {
 
@@ -9,7 +9,7 @@ export default class AddCategoryIdToTransactions1594593411855 implements Migrati
         isNullable:true,
       }))
       await queryRunner.createForeignKey('transactions', new TableForeignKey({
-        name:'transationCategory',
+        name:'transactionCategory',
         columnNames: ['category_id'],
         referencedColumnNames: ['id'],
         referencedTableName:'categories',

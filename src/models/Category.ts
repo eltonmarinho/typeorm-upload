@@ -1,10 +1,9 @@
 import { Entity,
   PrimaryGeneratedColumn,
   Column,
-  ManyToOne,
   CreateDateColumn,
   UpdateDateColumn,
-  JoinColumn } from 'typeorm'
+   } from 'typeorm'
 @Entity('categories')
 class Category {
   @PrimaryGeneratedColumn('uuid')
